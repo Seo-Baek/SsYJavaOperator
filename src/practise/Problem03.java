@@ -12,13 +12,14 @@ public class Problem03 {
 		int price = Integer.parseInt(args[1]);
 		int goodsNum = Integer.parseInt(args[2]);
 		
-		int surtax = (price * goodsNum) / 10;
+		int surtax = (int)((price * goodsNum) * 0.1);
 		int allP = (price * goodsNum) + surtax;
 		int charge = myMoney - allP;
 		
 		System.out.printf("지불한 금액 : %d원\n", myMoney);
 		System.out.println("제품단가 : " + price + "원");
-		System.out.println("수량: " + goodsNum + "개");
+		System.out.println("수량 : " + goodsNum + "개");
+		System.out.println("공급가 : " + (price * goodsNum) + "원");
 		System.out.printf("부가세 : %d원\n", surtax);
 		System.out.printf("상품총액 : %d원\n", allP);
 		System.out.printf("거스름 돈 : %d원\n", charge);
